@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.rowcoldemo.ui.theme.RowColDemoTheme
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.size
@@ -40,8 +41,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    Column(horizontalAlignment = Alignment.End,
-        modifier = modifier.width(250.dp)) {
+    Row(horizontalArrangement = Arrangement.End,
+        modifier = modifier.size(width = 400.dp, height = 200.dp)) {
         TextCell("1")
         TextCell("2")
         TextCell("3")
